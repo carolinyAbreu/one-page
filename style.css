@@ -1,0 +1,77 @@
+* /* * é geral, pega tudo*/ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* reset do css pra limpar padrões do navegador*/
+}
+
+body {
+    background-image: url(./assets/background.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex; /* ficar um do lado do outro (logo e escritas) */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 83px;
+    /* vertical | horizontal */ 
+}
+
+.navigation-aurem {
+    display: flex; /* deixa as escritas da header uma do lado da outra */
+    align-items: center;
+    flex-direction: row;
+}
+
+.aurem-info {
+    color: #7ca8ff;
+    display: flex; /* deixa as escritas da header uma do lado da outra */
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Gordita', sans-serif;
+    font-size: 15px;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.aurem-site {
+    color: #FFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Gordita', sans-serif;
+    font-size: 15px;
+}
+
+.svg-arrow {
+    padding: 0 0 0 3px;
+}
+
+a { 
+    color: inherit; 
+    text-decoration: none;
+} 
+
+a:hover {
+    text-decoration: underline;
+   }
+
+.text-box {
+    line-height: 1.5;
+    color: #7f90ae;
+    background-color: #001847;
+    border: 1px solid #002570;
+    padding: 25px;
+    margin: 40px 400px;
+    border-radius: 7px;
+    display: block; 
+    justify-content: center;
+    font-family: ui-monospace,Menlo,Monaco,Cascadia Mono,Segoe UI Mono,Roboto Mono,Oxygen Mono,"Ubuntu Monospace",Source Code Pro,Fira Mono,Droid Sans Mono,Courier New,monospace;
+}
+
+.input-name {
+    color: #00cfc8;
+}
