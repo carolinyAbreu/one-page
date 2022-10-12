@@ -1,7 +1,8 @@
 * /* * é geral, pega tudo*/ {
+     /* reset do css pra limpar padrões do navegador */
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* reset do css pra limpar padrões do navegador*/
+    box-sizing: border-box; /*Carol: Tenta explicar para o que serve essa linhas. Colocar sem saber vai te atrapalhar mais do que ajudar. */
 }
 
 body {
