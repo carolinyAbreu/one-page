@@ -1,8 +1,11 @@
-* /* * é geral, pega tudo*/ {
-     /* reset do css pra limpar padrões do navegador */
+*
+
+/* * é geral, pega tudo*/
+    {
+    /* reset do css pra limpar padrões do navegador */
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*Carol: Tenta explicar para o que serve essa linhas. Colocar sem saber vai te atrapalhar mais do que ajudar. */
+    box-sizing: border-box;
 }
 
 body {
@@ -13,23 +16,38 @@ body {
 }
 
 header {
-    display: flex; /* ficar um do lado do outro (logo e escritas) */
+    display: flex;
+    /* ficar um do lado do outro (logo e escritas) */
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    padding: 14px 83px;
-    /* vertical | horizontal */ 
+    padding: 16px 83px;
+    /* vertical | horizontal */
+
+}
+
+.cta-aurem {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.aurem-logo {
+    position: fixed;
+    align-items: center;
+    display: flex;
 }
 
 .navigation-aurem {
-    display: flex; /* deixa as escritas da header uma do lado da outra */
+    display: flex;
+    /* deixa as escritas da header uma do lado da outra */
     align-items: center;
-    flex-direction: row;
+    text-align: end;
 }
 
 .aurem-info {
     color: #7ca8ff;
-    display: flex; /* deixa as escritas da header uma do lado da outra */
+    display: flex;
+    /* deixa as escritas da header uma do lado da outra */
     align-items: center;
     flex-direction: row;
     font-family: 'Gordita', sans-serif;
@@ -51,20 +69,20 @@ header {
     padding: 0 0 0 3px;
 }
 
-a { 
-    color: inherit; 
+a {
+    color: inherit;
     text-decoration: none;
-} 
+}
 
 a:hover {
     text-decoration: underline;
-   }
+}
 
 main {
-    flex: auto;
-    display: flex; 
+    display: flex;
     padding-top: 24px;
-    justify-content: center; /* deixar no centro */
+    justify-content: center;
+    /* deixar no centro */
 }
 
 .text-box {
@@ -73,11 +91,13 @@ main {
     background-color: #001847;
     border: 1px solid #002570;
     padding: 24px;
-    margin: 24px 380px; /* vertical | horizontal */
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 606px;
     border-radius: 7px;
-    display: block; 
+    display: block;
     justify-content: center;
-    font-family: ui-monospace,Menlo,Monaco,Cascadia Mono,Segoe UI Mono,Roboto Mono,Oxygen Mono,"Ubuntu Monospace",Source Code Pro,Fira Mono,Droid Sans Mono,Courier New,monospace;
+    font-family: ui-monospace, Menlo, Monaco, Cascadia Mono, Segoe UI Mono, Roboto Mono, Oxygen Mono, "Ubuntu Monospace", Source Code Pro, Fira Mono, Droid Sans Mono, Courier New, monospace;
 }
 
 label {
@@ -97,13 +117,45 @@ input {
     color: white;
     border-radius: 4px;
     line-height: 25px;
-    font-family: ui-monospace,Menlo,Monaco,Cascadia Mono,Segoe UI Mono,Roboto Mono,Oxygen Mono,"Ubuntu Monospace",Source Code Pro,Fira Mono,Droid Sans Mono,Courier New,monospace;
+    margin-top: 5px;
+    font-family: ui-monospace, Menlo, Monaco, Cascadia Mono, Segoe UI Mono, Roboto Mono, Oxygen Mono, "Ubuntu Monospace", Source Code Pro, Fira Mono, Droid Sans Mono, Courier New, monospace;
 }
 
 input:focus {
     border: 1px solid white;
 }
 
-.name,.last-name,.email,.curriculum,.user-message,.update {
+.name,
+.last-name,
+.email,
+.curriculum,
+.user-message,
+.update {
     margin-top: 16px;
+}
+
+@media (max-width: 1265px) {
+    header {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .aurem-info {
+        display: none;
+    }
+}
+
+@media (max-width: 680px) {
+    .text-box {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-box {
+        font-size: 14px;
+    }
 }
