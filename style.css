@@ -79,7 +79,60 @@ main {
     border-radius: 7px;
     display: block; 
     justify-content: center;
+    position: static;
     font-family: ui-monospace,Menlo,Monaco,Cascadia Mono,Segoe UI Mono,Roboto Mono,Oxygen Mono,"Ubuntu Monospace",Source Code Pro,Fira Mono,Droid Sans Mono,Courier New,monospace;
+}
+
+.typing-text {
+    width: 556px;
+    height: 208px;
+}
+
+.skip-effect {
+    position: absolute;
+    color: #627597;
+    border: 1px solid #d0d7de;
+    background: none;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 20px;
+    right: 400px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.continue {
+    position: absolute;
+    color: #627597;
+    border: 1px solid #d0d7de;
+    background: none;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 20px;
+    right: 400px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.send {
+    color: white;
+    border: 1px solid white;
+    background: none;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 6px;
+    width: 90%;
+    cursor: pointer;
+    font-family: inherit;
+    position: static;
+}
+
+.button {
+    margin-top: 10px;
+    text-align: center;
 }
 
 label {
@@ -106,6 +159,10 @@ input:focus {
     border: 1px solid white;
 }
 
-.name,.last-name,.email,.curriculum,.user-message,.update {
-    margin-top: 16px;
+#name,#last-name,#email,#curriculum,#user-message,#update {
+    margin-top: 20px;
 }
+
+/* .hidden {
+    display: none;
+} */
