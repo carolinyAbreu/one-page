@@ -7,11 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Page</title>
 
-    <style>
-        /* Você pode chamar o import direto no css, isso ajuda a deixar o código mais organizado e dividir as responsabilidades. */
-        @import url('http://fonts.cdnfonts.com/css/gordita');
-    </style>
-
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -48,18 +43,19 @@
 
     <main>
         <div class="text-box">
-            <p>
-                VEM PARA A AUREM! <br> <br>
-
-                A Aurem está revolucionando a inclusão no Brasil, utilizando a
-                tecnologia como principal ferramenta. <br>
-                Diminuímos as barreiras da comunicação e conectamos <br> pessoas. Isso
-                é só o começo! <br> <br>
-
-                VEM FAZER PARTE DESSA REVOLUÇÃO! <br> <br>
-            </p>
-
-            <div class="name">
+            <button class="skip-effect"> Pular </button>
+            <div class="typing-text" id="apresentation-text">
+                <!-- <p class="initial-text"> VEM PARA A AUREM! </p>
+                <br>
+                <p class="second-text"> A Aurem está revolucionando a inclusão no Brasil, utilizando a
+                    tecnologia como principal ferramenta. </p>
+                <p class="third-text"> Diminuímos as barreiras da comunicação e conectamos </p>
+                <p> pessoas. Isso é só o começo! </p>
+                <br>
+                <p class="fourth-text"> VEM FAZER PARTE DESSA REVOLUÇÃO! </p>
+                <br> -->
+            </div>
+            <div id="name" class="hidden">
                 <label for="nome"> Qual é o seu nome? </label>
                 <div class="inputs">
                     <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
@@ -70,11 +66,13 @@
                         <polyline points="144 56 216 128 144 200" fill="none" stroke="#EA4AAA" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="16"></polyline>
                     </svg>
-                    <input type="text" id="nome">
+                    <input type="text" id="firstName">
+                    <!-- <input type="button" value="Continue" class="continue"> -->
+                    <a class="continue" href="#lastName">Continue</a>
                 </div>
             </div>
 
-            <div class="last-name">
+            <div id="last-name" class="hidden">
                 <label for="sobrenome"> E seu sobrenome? </label>
                 <div class="inputs">
                     <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
@@ -85,11 +83,12 @@
                         <polyline points="144 56 216 128 144 200" fill="none" stroke="#EA4AAA" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="16"></polyline>
                     </svg>
-                    <input type="text" id="sobrenome">
+                    <input type="text" id="lastName">
+                    <a class="continue" href="#email">Continue</a>
                 </div>
             </div>
 
-            <div class="email">
+            <div id="email" class="hidden">
                 <label for="e-mail"> Qual seu e-mail que você mais usa? </label>
                 <div class="inputs">
                     <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
@@ -101,10 +100,11 @@
                             stroke-linejoin="round" stroke-width="16"></polyline>
                     </svg>
                     <input type="email" id="email">
+                    <a class="continue" href="#CV">Continue</a>
                 </div>
             </div>
 
-            <div class="curriculum">
+            <div id="curriculum" class="hidden">
                 <label for="curriculo"> Quase lá! Agora precisamos do seu currículo. </label>
                 <div class="inputs">
                     <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
@@ -115,11 +115,13 @@
                         <polyline points="144 56 216 128 144 200" fill="none" stroke="#EA4AAA" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="16"></polyline>
                     </svg>
-                    <input type="file" id="curriculo">
+                    <input type="file" id="CV">
+                    <a class="continue" href="#message">Continue</a>
+
                 </div>
             </div>
 
-            <div class="user-message">
+            <div id="user-message" class="hidden">
                 <label for="message"> Deixe uma mensagem :D </label>
                 <div class="inputs">
                     <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
@@ -131,10 +133,11 @@
                             stroke-linejoin="round" stroke-width="16"></polyline>
                     </svg>
                     <input type="text" id="message">
+                    <a class="continue" href="#news">Continue</a>
                 </div>
             </div>
 
-            <div class="update">
+            <div id="update" class="hidden">
                 <label for="updates"> Deseja receber atualizações e anúncios por e-mail? <br>
                     Digite "s" para sim ou "n" para não </label>
                 <div class="inputs">
@@ -146,11 +149,17 @@
                         <polyline points="144 56 216 128 144 200" fill="none" stroke="#EA4AAA" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="16"></polyline>
                     </svg>
-                    <input type="text" id="sobrenome">
+                    <input type="text" id="news">
                 </div>
+            </div>
+            <div class="button">
+                <button class="send"> Enviar </button>
             </div>
         </div>
     </main>
+
+    <script type="text/javascript" src="./script.js">
+    </script>
 </body>
 
 </html>

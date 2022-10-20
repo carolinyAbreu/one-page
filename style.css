@@ -1,8 +1,7 @@
-*
+@import url('http://fonts.cdnfonts.com/css/gordita');
 
-/* * é geral, pega tudo*/
-    {
-    /* reset do css pra limpar padrões do navegador */
+* /* * é geral, pega tudo*/ {
+     /* reset do css pra limpar padrões do navegador */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -98,6 +97,58 @@ main {
     display: block;
     justify-content: center;
     font-family: ui-monospace, Menlo, Monaco, Cascadia Mono, Segoe UI Mono, Roboto Mono, Oxygen Mono, "Ubuntu Monospace", Source Code Pro, Fira Mono, Droid Sans Mono, Courier New, monospace;
+}
+
+.typing-text {
+    width: 556px;
+    height: 208px;
+}
+
+.skip-effect {
+    position: absolute;
+    color: #627597;
+    border: 1px solid #d0d7de;
+    background: none;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 20px;
+    right: 400px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.continue {
+    position: absolute;
+    color: #627597;
+    border: 1px solid #d0d7de;
+    background: none;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 20px;
+    right: 400px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.send {
+    color: white;
+    border: 1px solid white;
+    background: none;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 6px;
+    width: 90%;
+    cursor: pointer;
+    font-family: inherit;
+    position: static;
+}
+
+.button {
+    margin-top: 10px;
+    text-align: center;
 }
 
 label {
