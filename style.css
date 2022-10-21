@@ -85,6 +85,7 @@ main {
 }
 
 .text-box {
+    position: relative;
     line-height: 1.5;
     color: #7f90ae;
     background-color: #001847;
@@ -104,32 +105,36 @@ main {
     height: 208px;
 }
 
-.skip-effect {
-    position: absolute;
-    color: #627597;
+.btn {
+    color: #8c959f;
     border: 1px solid #d0d7de;
     background: none;
     padding: 2px 8px;
     font-size: 12px;
     line-height: 20px;
-    right: 400px;
     border-radius: 6px;
     cursor: pointer;
     font-family: inherit;
+    text-align: center;
+}
+
+.btn:hover {
+    text-decoration: underline;
 }
 
 .continue {
     position: absolute;
-    color: #627597;
-    border: 1px solid #d0d7de;
-    background: none;
-    padding: 2px 8px;
-    font-size: 12px;
-    line-height: 20px;
-    right: 400px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-family: inherit;
+    padding: 7px;
+    margin-left: 10px;
+    height: 30px;
+    width: 90px;
+    text-align: center;
+}
+
+#skip-effect {
+    position: absolute;
+    margin-left: 500px;
+    margin-right: 50px;
 }
 
 .send {
@@ -143,12 +148,7 @@ main {
     width: 90%;
     cursor: pointer;
     font-family: inherit;
-    position: static;
-}
-
-.button {
-    margin-top: 10px;
-    text-align: center;
+    margin-top: 20px;
 }
 
 label {
@@ -161,7 +161,7 @@ label {
 
 input {
     background-color: #001847;
-    width: 70%;
+    width: 80%;
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
@@ -169,21 +169,34 @@ input {
     border-radius: 4px;
     line-height: 25px;
     margin-top: 5px;
+    height: 30px;
     font-family: ui-monospace, Menlo, Monaco, Cascadia Mono, Segoe UI Mono, Roboto Mono, Oxygen Mono, "Ubuntu Monospace", Source Code Pro, Fira Mono, Droid Sans Mono, Courier New, monospace;
+}
+
+.inputs::before {
+    content: "→";
+    color: #EA4AAA;
 }
 
 input:focus {
     border: 1px solid white;
 }
 
-.name,
-.last-name,
-.email,
-.curriculum,
-.user-message,
-.update {
+#name,
+#last-name,
+#email,
+#curriculum,
+#user-message,
+#update {
     margin-top: 16px;
 }
+
+@media (min-width: 2500px) {
+    header {
+        padding-left: 700px;
+        padding-right: 500px;
+    }
+} 
 
 @media (max-width: 1265px) {
     header {
@@ -192,9 +205,9 @@ input:focus {
     }
 }
 
-@media (max-width: 650px) {
-    .aurem-info {
-        display: none;
+@media (max-width: 768px) {
+    .text-box {
+        font-size: 14px;
     }
 }
 
@@ -205,8 +218,15 @@ input:focus {
     }
 }
 
-@media (max-width: 768px) {
-    .text-box {
-        font-size: 14px;
+@media (max-width: 650px) {
+    .aurem-info {
+        display: none;
     }
+    .text-box {
+        margin: 0 40px;
+    }
+}
+
+.hidden {
+    display: none;
 }
