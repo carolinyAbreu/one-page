@@ -7,11 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Page</title>
 
-    <style>
-        /* Você pode chamar o import direto no css, isso ajuda a deixar o código mais organizado e dividir as responsabilidades. */
-        @import url('http://fonts.cdnfonts.com/css/gordita');
-    </style>
-
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -27,128 +22,95 @@
                 </svg>
             </a>
         </div>
-        <nav class="navigation-aurem">
-            <p class="aurem-info"> Quer saber mais sobre a Aurem? </p>
-            <a class="aurem-site" target="_blank" href="http://www.aurem.com.br">
-                Visite nosso site
-                <svg class="svg-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FFFFFF"
-                    viewBox="0 0 256 256">
-                    <rect width="100" height="100" fill="none"></rect>
-                    <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="#FFFFFF" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></line>
-                    <polyline points="144 56 216 128 144 200" fill="none" stroke="#FFFFFF" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></polyline>
-                </svg>
-            </a>
-        </nav>
+        <div class="cta-aurem">
+            <nav class="navigation-aurem">
+                <p class="aurem-info"> Quer saber mais sobre a Aurem? </p>
+                <a class="aurem-site" target="_blank" href="http://www.aurem.com.br">
+                    Visite nosso site
+                    <svg class="svg-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FFFFFF"
+                        viewBox="0 0 256 256">
+                        <rect width="100" height="100" fill="none"></rect>
+                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="#FFFFFF" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="144 56 216 128 144 200" fill="none" stroke="#FFFFFF" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16"></polyline>
+                    </svg>
+                </a>
+            </nav>
+        </div>
 
     </header>
 
     <main>
         <div class="text-box">
-            <p>
-                VEM PARA A AUREM! <br> <br>
-
-                A Aurem está revolucionando a inclusão no Brasil, utilizando a
-                tecnologia como principal ferramenta. <br>
-                Diminuímos as barreiras da comunicação e conectamos <br> pessoas. Isso
-                é só o começo! <br> <br>
-
-                VEM FAZER PARTE DESSA REVOLUÇÃO! <br> <br>
-            </p>
-
-            <div class="name">
-                <label for="nome"> Qual é o seu nome? </label>
-                <div class="inputs">
-                    <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
-                        viewBox="0 0 256 256">
-                        <rect width="100" height="100" fill="none"></rect>
-                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="144 56 216 128 144 200" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></polyline>
-                    </svg>
-                    <input type="text" id="nome">
+            <button class="btn" id="skip-effect"> Pular </button>
+            <div class="typing-text" id="apresentation-text"> </div>
+            <form id="form">
+                <div id="name" class="hidden">
+                    <span> Qual é o seu nome? * </span>
+                    <div class="inputs">
+                        <label for="nome"> </label>
+                        <input type="text" id="firstName">
+                        <a class="btn continue" href="#lastName" onclick="changeState('last-name')">Continue</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="last-name">
-                <label for="sobrenome"> E seu sobrenome? </label>
-                <div class="inputs">
-                    <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
-                        viewBox="0 0 256 256">
-                        <rect width="100" height="100" fill="none"></rect>
-                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="144 56 216 128 144 200" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></polyline>
-                    </svg>
-                    <input type="text" id="sobrenome">
+                <div id="last-name" class="hidden">
+                    <span> E seu sobrenome? *</span>
+                    <div class="inputs">
+                        <label for="sobrenome"> </label>
+                        <input type="text" id="lastName">
+                        <a class="btn continue" href="#email-input" onclick="changeState('email')">Continue</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="email">
-                <label for="e-mail"> Qual seu e-mail que você mais usa? </label>
-                <div class="inputs">
-                    <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
-                        viewBox="0 0 256 256">
-                        <rect width="100" height="100" fill="none"></rect>
-                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="144 56 216 128 144 200" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></polyline>
-                    </svg>
-                    <input type="email" id="email">
+                <div id="email" class="hidden">
+                    <span> Qual seu e-mail que você mais usa? *</span>
+                    <div class="inputs">
+                        <label for="e-mail"> </label>
+                        <input type="text" name="email" id="email-input">
+                        <a class="btn continue" href="#CV" onclick="changeState('curriculum')">Continue</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="curriculum">
-                <label for="curriculo"> Quase lá! Agora precisamos do seu currículo. </label>
-                <div class="inputs">
-                    <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
-                        viewBox="0 0 256 256">
-                        <rect width="100" height="100" fill="none"></rect>
-                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="144 56 216 128 144 200" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></polyline>
-                    </svg>
-                    <input type="file" id="curriculo">
-                </div>
-            </div>
+                <div id="curriculum" class="hidden">
+                    <span> Quase lá! Agora precisamos do seu currículo. *</span>
+                    <div class="inputs" id="curriculumVitae">
+                        <label for="curriculo"> </label>
+                        <input type="file" id="CV">
+                        <a class="btn continue" href="#message" onclick="changeState('user-message')">Continue</a>
 
-            <div class="user-message">
-                <label for="message"> Deixe uma mensagem :D </label>
-                <div class="inputs">
-                    <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
-                        viewBox="0 0 256 256">
-                        <rect width="100" height="100" fill="none"></rect>
-                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="144 56 216 128 144 200" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></polyline>
-                    </svg>
-                    <input type="text" id="message">
+                    </div>
                 </div>
-            </div>
 
-            <div class="update">
-                <label for="updates"> Deseja receber atualizações e anúncios por e-mail? <br>
-                    Digite "s" para sim ou "n" para não </label>
-                <div class="inputs">
-                    <svg class="arrow-input" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#EA4AAA"
-                        viewBox="0 0 256 256">
-                        <rect width="100" height="100" fill="none"></rect>
-                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="144 56 216 128 144 200" fill="none" stroke="#EA4AAA" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16"></polyline>
-                    </svg>
-                    <input type="text" id="sobrenome">
+                <div id="user-message" class="hidden">
+                    <span> Deixe uma mensagem :D </span>
+                    <div class="inputs">
+                        <label for="message"> </label>
+                        <input type="text" id="message">
+                        <a class="btn continue" href="#news" onclick="changeState('update')">Continue</a>
+                    </div>
                 </div>
-            </div>
+
+                <div id="update" class="hidden">
+                    <span> Deseja receber atualizações e anúncios por e-mail? <br>
+                        Digite "s" para sim ou "n" para não *</span>
+                    <div class="inputs news">
+                        <label for="updates"> </label>
+                        <input type="text" id="news">
+                    </div>
+                    <button class="send" type="submit" onclick="checkForm();"> Enviar </button>
+                </div>
+            </form>
         </div>
     </main>
+
+    <script type="text/javascript" src="./script.js">
+    </script>
 </body>
+
+<footer class="wrapper">
+    Developed by Caroliny - Fullstack Intern 💙 Aurem.
+</footer>
 
 </html>
