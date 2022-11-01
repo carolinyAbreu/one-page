@@ -133,6 +133,33 @@ main {
     gap: 10px;
 }
 
+.input-file::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.input-file::before {
+    content: "Selecione seu currículo";
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 6px; /*vertical | horizontal*/
+    outline: none;
+    white-space: nowrap; /*um do lado do outro*/
+    width: 35%;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.input-file:hover::before {
+    border-color: black;
+}
+
+.input-file:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
 /* label[for="curriculo"] {
     display: inline-block;
     width: 35%;
